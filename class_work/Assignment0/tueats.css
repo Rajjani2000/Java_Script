@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+
+.formele 
+{
+    margin-top: 0px;
+    padding: 40px;
+}
+.top_space
+{
+    margin-top: 7px;
+}
+.header {
+    background-color: #FFBB00;
+    border: 2px solid #000;
+    color: #000000; 
+   
+    
+}
+.center_conatiner
+{
+ background: linear-gradient(to right, #ffc934 0%, #f9f9f9 100%);
+
+}
+
+.footer
+{
+
+    background: linear-gradient(to right, #ffc934 0%, #f9f9f9 100%);
+    border: 2px solid #000;
+    border-width: 1px;
+    color: #000000; 
+
+
+}
+th, tr
+{
+    background-color: #808080;
+    border: 2px solid black;
+    
+}
+table
+{
+    border-collapse: collapse;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+}
+/* link css */
+a
+{
+    color: blue;
+    transition: color 0.3s;
+}
+a:hover
+{
+
+    color: #FFBB00;
+}
+.mytb
+{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <b>Hello :- </b>
+    <p id="output"></p>   <!--Username -->
+    <p id="op2"></p>      <!--Password-->
+    <p id="op3"></p>   <!--Vpassword-->
+    <p id="op4">   <!--Reference Code  -->
+    </p>
+    <p id="op5"></p>   <!-- Email -->
+    <p id="op6"></p>   <!--Check Box-->
+
+    </p>
+
+    <script>
+       
+        // Fetch the Daata from the privious page via URL...
+         var fetchdata = window.location.search;
+
+        //  Create variable so that alert can be made on data
+         var inner = new URLSearchParams(fetchdata);
+
+         var c1= inner.get("username");  
+         var p1 = "username: " +c1+"<br>";
+         document.getElementById("output").innerHTML =p1; 
+
+          // password
+         var c2= inner.get("password");
+         var p2 = "password: " +c2+"<br>";
+         document.getElementById("op2").innerHTML =p2;
+
+          // Vpassword
+         var c3= inner.get("vpassword");
+         var p3 = "vpassword: " +c3+"<br>";
+         document.getElementById("op3").innerHTML =p3;
+
+          // refcode
+          var c4= inner.get("refcode");
+         var p4 = "refcode: " +c4+" (Free Meal)<br>";
+         document.getElementById("op4").innerHTML =p4;
+
+
+
+          // email
+          var c5= inner.get("email");
+         var p5 = "email: " +c5+"<br>";
+         document.getElementById("op5").innerHTML =p5;
+
+
+         // check box
+        //  if Checkbox is on or off then assign value true,false....
+         var c6= inner.get("checkbox");
+         if(c6 == null)
+         {
+            c6 = "false";
+         }
+         else
+         {
+            c6 = "true";
+         }
+         var p6 = "checkbox: " +c6+"<br>";
+         document.getElementById("op6").innerHTML =p6;
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
+

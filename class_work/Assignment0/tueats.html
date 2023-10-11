@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="tueats.css">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+
+</head>
+<body>
+        <div class="header">
+
+        <div class="logo" style="display:flex; justify-content: center; align-items:center ">
+            <img src="logo.png" style="width: 170px; height: 160px;"> 
+        </div>
+        <div class="heading" style="display: flex; justify-content: center; align-items: center; margin-top: 10px;"><b>Welcome to TUEats</b></div> 
+        </div>
+
+
+
+        <div class="center_conatiner" style="display: flex; justify-content: center; align-items: center;">
+          
+            
+           <div class="formele">
+        
+            <div class="inside">
+            <!--Sign UP  -->
+            <h1 > Sign up</h1>
+            <h3>Please fill out the form sign up/log in</h3>
+                
+                <form id = "signup_form"  action="tueats_completed.html"   method="get">
+                   <!-- Username  -->
+                    <div>
+                    <label for="username"><b>Username</b></label>
+                   </div>
+                   
+                   <div>
+                   <input type="text" name="username" id="username" placeholder="6-24 characters" required>
+                   </div>
+
+                    <!-- Email  -->
+                       <div class="top_space">
+                        <label for="email"><b>Email</b></label>
+                       </div>
+                       
+                       <div class="top_space">
+                       <input type="email" name="email" id="email" placeholder="emailD@domain.com" required>
+                       </div>
+
+                        <!-- Referral Code  -->
+                        <div class="top_space">
+                            <label for="refcode"><b>Referral code</b></label>
+                           </div>
+                           
+                           <div class="top_space">
+                           <input type="text" name="refcode" id="refcode" placeholder="optional">
+                           </div>
+
+                        <!-- Create Passwords -->
+                        <div class="top_space">
+                            <label for="password"><b>Create Password:</b></label>
+                           </div>
+                           
+                           <div class="top_space">
+                           <input type="password" name="password" id="password" placeholder="8 or more characters">
+                           </div>
+                
+                        <!-- Verify Password -->
+                        <div class="top_space">
+                            <label for="vpassword"><b>Verify Password:</b></label>
+                           </div>
+                           
+                           <div class="top_space">
+                           <input type="password" name="vpassword" id="vpassword" placeholder="Re-type the password">
+                           <span id="message"></span>
+                           
+                           </div>
+
+                        
+                        <!-- check box -->
+                        <div class="top_space">
+                            <input type="checkbox" name="checkbox" id="checkbox">
+                            Sign up for our newsletters
+                        </div>
+
+                        <!-- Submit --> 
+                           <div class="top_space">
+                           <input type="submit" value="submit" id="submit">
+                           </div>
+                </div>
+                    
+            </form>
+           </div>        
+        
+        </div>
+
+
+        <!-- footer -->
+        <div class="footer">
+
+            <div class="caption" style="display: flex; justify-content: center; align-items: center;">
+
+                "Menu is Subject to change, Please visit the main  <a href="https://www.towson.edu/">Towson Website</a>for more information"
+            </div>
+
+            <!-- my table -->
+            <div class="mytb">
+                <table border="1"  >
+                    <tr>
+                        <th></th>
+                        <th><b>Name</b></th>
+                        <th><b>Price</b></th>
+                        <th><b>Calories</b></th>
+
+                    </tr>
+                    <tr>
+                        <th>item 1</th>
+                        <th>Burger</th>
+                        <th>$8</th>
+                        <th>550</th>
+                        
+                    </tr>
+                    <tr>
+                        <th>item 2</th>
+                        <th>Mozzarella Sticks</th>
+                        <th>$7</th>
+                        <th rowspan="2">400</th>
+                        
+                    </tr>
+                    <tr>
+                        <th>item 3</th>
+                        <th>Fries</th>
+                        <th>$4</th>
+                        
+                        
+                    </tr>
+
+
+                </table>
+            </div>
+
+                
+           
+
+        </div>
+
+
+<!-- LOGICAL PART.... -->
+
+     <script>
+
+            document.addEventListener('DOMContentLoaded',function()
+            {
+
+                // Fetch the data from html pages
+                const password = document.getElementById('password');
+                const confirm_pass = document.getElementById('vpassword');
+                const form = document.getElementById('signup_form');
+                const username = document.getElementById('username');
+                const email = document.getElementById('email');
+                const  chechkbox = document.getElementById('checkbox');
+
+                // Create error flag to prevent from sign in....
+                var error_flag = false;
+
+                
+
+                form.addEventListener('submit',function(event)
+                {
+                   
+                    // convert the reference code into lower case.. 
+                    const myref = document.getElementById('refcode').value.toLowerCase();
+                    
+                    
+                    // predefine invalid refernce code....
+                    const invalid_code = ['tucis','bogo','eatgood'];
+                    
+                    // check wheater password match or not.... 
+                    if (password.value !== confirm_pass.value)
+                    {
+                    alert('Password do not match');
+                    error_flag = true; 
+                    // exit()
+
+                    } 
+
+                    // check username length...
+                    else if(username.value.length <6)
+                    {
+                        alert('Username need to be greater than 6 characters...');
+                        error_flag = true;
+                    }
+                    else if(username.value.length >24)
+                   {
+                        alert('username need to be smaller than 24 character');
+                        error_flag = true;
+
+                   }
+                    
+                   // check  reference code is valid or not.....
+                   else if(invalid_code.includes(myref))
+                   {
+                    alert('invalid code....')
+                    error_flag = true;
+                    // event.preventDefault();
+                   }
+                    
+                   // default condition...    
+                    else
+                    {
+                       
+                        error_flag = false;
+                        window.location.href = "tueats_completed.html";
+                    }
+                  
+                    // if by any chance error flag is activated, stop submit...
+                    if(error_flag == true)
+                   {
+
+                    event.preventDefault();
+
+                   }
+
+                });
+            });
+
+
+
+
+
+     </script>
+</body>
+</html>

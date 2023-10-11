@@ -1,0 +1,14 @@
+
+#lecture 3
+Asynchronous programing is used when specefic task takes long time to execute so we use such type of programming to push that task 
+in background and proceed for the next task
+
+javaScript is single threaded...Eventhough there are plethora of processs at back-end
+
+to allow asynchronous programming, node js, which is js engine, has two things..
+1. The call stack
+The Eventloop
+
+Callback function is used to override the tasks that takes long time to execute
+
+Call stack...
