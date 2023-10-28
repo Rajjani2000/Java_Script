@@ -17,7 +17,7 @@ const nodemailer = require('nodemailer');
     from :'codesquirrel1009@gmail.com',
     to : 'pankajjani09@yahoo.com',
     Subject : 'M&T Alert : Password Reset',
-    text : 'Your Password Has been reseted....'
+    text : 'Yougcvhgjhghjkhkjhjk....'
  }
  
  //Email Sent..
