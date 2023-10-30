@@ -6,7 +6,7 @@ const nodemailer = require('nodemailer');
         service : 'Gmail',
         auth : {
             user : 'codesquirrel1009@gmail.com',
-            pass : 'aqlcgowlnqbwkzcl'
+            pass : ''
         }
 
       }
@@ -15,7 +15,7 @@ const nodemailer = require('nodemailer');
  const Email_option = {
 
     from :'codesquirrel1009@gmail.com',
-    to : 'pankajjani09@yahoo.com',
+    to : '',
     Subject : 'M&T Alert : Password Reset',
     text : 'Yougcvhgjhghjkhkjhjk....'
  }
