@@ -28,6 +28,7 @@ function Bookgallery() {
     </section>
   );
 }
+   
          
 const Book = (props) => {
   const { imgs, titles, authors } = props;
