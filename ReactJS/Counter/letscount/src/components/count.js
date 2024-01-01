@@ -13,12 +13,7 @@ class Co extends Component
     
     changeMessage()
     {
-        this.setState((prevState)=>
-        {
-            return{
-                message: prevState.message+1,
-            };
-        });
+     
 
     }
 
