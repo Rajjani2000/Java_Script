@@ -31,6 +31,16 @@ class Co extends Component
             };
         });
     }
+    zero()
+    {
+        this.setState((maketozer)=>
+        {
+            return{
+                message: 0  
+            };
+        });
+    
+    }
     
     
     render()
@@ -41,6 +51,7 @@ class Co extends Component
             
             <button onClick={()=>{this.changeMessage()}}>Count+</button>
             <button onClick={()=>{this.change()}}>Count-</button>
+            <button onClick={()=>{this.zero()}}>Clear</button>
         </div>
     );
     }
