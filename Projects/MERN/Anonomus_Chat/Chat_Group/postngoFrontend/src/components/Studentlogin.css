@@ -1,0 +1,140 @@
+.background
+{
+    position: fixed;
+    top: 0px;
+    width: auto;
+    height: 125%;
+    filter: blur(0.1px) opacity(20%);
+    object-fit: cover;
+    z-index: -1;
+}
+.login-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background-color: var(--accent-color-yellow);
+    border: 2px solid black;
+    box-shadow: 25px 25px 1px var(--accent-color-red);
+
+    width: 440px;
+    height: 384px;
+    margin-top: 75px;
+    margin-left: 75px;
+    padding-left: 40px;
+    padding-top: 25px;
+
+    z-index: 1;
+}
+.login-container-title
+{
+    font-family: "Ginto Nord";
+    
+}
+
+.login-form-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    font-family: "Hiragino Maru Gothic";
+    font-weight: 700;
+}
+
+.login-form-input
+{
+    width: 300px;
+    height: 32px;
+    margin-left: 36px;
+
+    border-radius: 2px;
+    border: 1px solid grey;
+    text-align: center;
+}
+
+.login-form-item
+{
+    margin-top: 16px;
+}
+
+.admin-login-btn
+{
+    font-family: "Ginto Nord";
+    font-weight: 800;
+    font-size: large;
+
+    width: 88px;
+    height: 30px;
+    margin-top: 0px;
+    margin-left: 342px;
+    padding-top: 4px;
+    align-self: right;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 1px black;
+    background-color: var(--accent-color-green);
+}
+
+.admin-login-btn:active
+{
+    transform: translateX(5px) translateY(5px);
+    box-shadow: none;
+}
+
+.login-form-btn
+{
+    font-family: "Ginto Nord";
+    font-weight: 800;
+    font-size: large;
+
+    width: 125px;
+    height: 40px;
+    margin-top: 42px;
+    margin-left: 24px;
+    padding-top: 4px;
+    align-self: center;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 1px black;
+    background-color: var(--accent-color-green);
+}
+.login-form-btn:active
+{
+    transform: translateX(5px) translateY(5px);
+    box-shadow: none;
+} 
+
+.additional-links
+{
+    display: flex;
+    flex-direction: row;
+    
+    margin-top: 60px;
+    margin-left: 330px;
+}
+.additional-link
+{
+    border: none;
+    background: none;
+    margin-left: 20px;
+    
+    text-decoration: underline;
+    font-family: "Ginto Nord";
+    font-size: large;
+    text-wrap: nowrap;
+    color: var(--accent-color-blue);
+
+    cursor: pointer;
+}
+.additional-link:active
+{
+    color: var(--accent-color-brown);
+}
+.additional-link:hover
+{
+    filter: drop-shadow(16px 8px 0px WhiteSmoke);
+}
