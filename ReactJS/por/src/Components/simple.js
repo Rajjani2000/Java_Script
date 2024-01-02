@@ -5,7 +5,7 @@ const One = props =>
 {
     return(
         <div>
-            Hello {props.name}{props.lastname}
+            Hello {props.name}{props.lastname} {props.age}
         </div>
     )
 }
