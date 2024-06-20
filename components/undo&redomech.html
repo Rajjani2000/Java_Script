@@ -1,0 +1,35 @@
+<!--  
+to make undo functionality work properly, we need to save the origanl text
+into the variable 
+and call that variable via the function
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">This is my orignal text</h1>
+    <button onclick="changeText()"> change it</button>
+    <button onclick="undoText()"> undo</button>
+    <script> 
+        var orignalText = document.getElementById('h1').textContent;
+
+
+        function changeText()
+        {
+            document.getElementById('h1').textContent = "new text";
+            
+        }
+        function undoText()
+        {
+            document.getElementById('h1').textContent = orignalText;
+        }
+
+    </script>
+   
+</body>
+</html>
